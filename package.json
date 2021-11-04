@@ -1,0 +1,27 @@
+{
+  "name": "trackback-verifiable-sdk-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**.js -timeout 100000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trackback-blockchain/trackback-verifiable-sdk-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trackback-blockchain/trackback-verifiable-sdk-tests/issues"
+  },
+  "homepage": "https://github.com/trackback-blockchain/trackback-verifiable-sdk-tests#readme",
+  "dependencies": {
+    "@trackback/agent": "^0.0.1-alpha.20"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3"
+  }
+}
