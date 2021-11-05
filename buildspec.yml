@@ -19,8 +19,7 @@ phases:
   pre_build:
     commands:
       - echo "Runnung Tests"
-      - npm i -g yarn
-      - yarn install
+      - npm install
       - npm test
     finally:
       - echo "Run Test finished"
