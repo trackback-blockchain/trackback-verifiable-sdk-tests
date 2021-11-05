@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "find ./tests -name '*.spec.js' | xargs mocha -R spec -timeout 40000"
+    "test": "find ./tests -name '*.spec.js' | xargs mocha -R spec -timeout 100000"
   },
   "repository": {
     "type": "git",

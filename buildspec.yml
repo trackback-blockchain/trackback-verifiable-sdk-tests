@@ -1,0 +1,28 @@
+version: 0.2
+env:
+  variables:
+    NPM_TOKEN: ${NPM_TOKEN}
+
+phases:
+  install:
+    commands:
+      - echo "Install phase"
+      - apt-get update -y
+      - apt install curl 
+      - echo Installing nvm...
+      - curl -sL https://deb.nodesource.com/setup_14.x -o setup_14.sh
+      - sh ./setup_14.sh
+      - apt install nodejs
+  pre_build:
+    commands:
+      - echo "Runnung Tests"
+      - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+      - npm install
+    finally:
+      - echo "Finished"
+  build:
+    commands:
+      - echo "Running Test command"
+      - npm test
+    finally:
+      - echo "Run Building finished"
