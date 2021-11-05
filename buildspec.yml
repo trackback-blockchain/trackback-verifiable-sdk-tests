@@ -16,7 +16,8 @@ phases:
   pre_build:
     commands:
       - echo "Runnung Tests"
-      - npm install --registry https://registry.npmjs.org/:_authToken\=$\{NPM_TOKEN\}
+      - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
+      - npm install
       - npm test
     finally:
       - echo "Run Test finished"
