@@ -6,7 +6,7 @@ env:
 phases:
   install:
     commands:
-      - echo "Entered the install phase..."
+      - echo "Install phase"
       - apt-get update -y
       - apt install curl 
       - echo Installing nvm...
