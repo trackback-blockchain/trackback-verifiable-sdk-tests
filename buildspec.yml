@@ -13,9 +13,6 @@ phases:
       - curl -sL https://deb.nodesource.com/setup_14.x -o setup_14.sh
       - sh ./setup_14.sh
       - apt install nodejs
-
-    finally:
-      - echo "installed"
   pre_build:
     commands:
       - echo "Runnung Tests"
