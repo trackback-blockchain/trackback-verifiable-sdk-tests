@@ -18,12 +18,11 @@ phases:
       - echo "Runnung Tests"
       - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
       - npm install
-      - npm test
     finally:
-      - echo "Run Test finished"
+      - echo "Finished"
   build:
     commands:
-      - echo "Running build command"
-      - npm run build
+      - echo "Running Test command"
+      - npm test
     finally:
       - echo "Run Building finished"
