@@ -1,4 +1,4 @@
-const { CredentialIssuer, Connector, createAccount, TrackBackAgent } = require('@trackback/agent');
+const { CredentialIssuer, Connector, TrackBackAgent, CredentialVerifier } = require('@trackback/agent');
 const { expect } = require('chai');
 
 describe('TrackBack Agent SDK Tests', () => {
@@ -129,6 +129,61 @@ describe('TrackBack Agent SDK Tests', () => {
         expect(typeof jwtPresentation).to.be.equal('string');
 
         expect(jwtPresentation.split('.').length).to.be.equal(3);
+
+    })
+
+
+    it('should validate a verifiable presentation ', async () => {
+
+
+        const connector = new Connector()
+        const agent = new TrackBackAgent(connector);
+
+        const account = await connector.getDefaultAccount()
+
+        const context = {
+            agent,
+            account: account
+        }
+
+        const issuer = await CredentialIssuer.build();
+
+        const metada = { "content-type": "application/json" }
+        const resMetada = { "content-type": "application/json" }
+
+        const result = await issuer.save(context, metada, resMetada);
+
+        expect(result).to.deep.equal(issuer.toDidDocument());
+
+
+        const credential = {
+            '@context': ['https://www.w3.org/2018/credentials/v1'],
+            type: ['VerifiableCredential'],
+            issuanceDate: '2010-01-01T19:23:24Z',
+            credentialSubject: { name: "Test", surname: "Test Test" },
+            issuer: issuer.id,
+        };
+        const jwt = await issuer.createVerifiableCredentials(credential);
+
+        expect(typeof jwt).to.be.equal('string')
+        expect(jwt.split('.').length).to.be.equal(3)
+
+        // Issuer creates a verifiable credential presentation 
+        const jwtPresentation = await issuer.createVerifiablePresentation([jwt], issuer.keypair);
+        expect(typeof jwtPresentation).to.be.equal('string');
+
+        expect(jwtPresentation.split('.').length).to.be.equal(3);
+
+
+
+        const accountB = await connector.getDefaultAccount("Bob")
+        const contextB = {
+            agent,
+            account: accountB
+        }
+        const verifier = new CredentialVerifier();
+        const r = await verifier.verifyPresentation(jwtPresentation, contextB)
+        expect(r).to.be.equal(true);
 
     })
 
