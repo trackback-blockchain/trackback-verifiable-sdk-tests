@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/trackback-blockchain/trackback-verifiable-sdk-tests#readme",
   "dependencies": {
-    "@trackback/agent": "^0.0.1-alpha.20",
-    "@trackback/key": "^0.0.1-alpha.5",
-    "@trackback/vc": "^0.0.1-alpha.6"
+    "@trackback/agent": "0.0.1-alpha.22",
+    "@trackback/key": "0.0.1-alpha.5",
+    "@trackback/vc": "0.0.1-alpha.6"
   },
   "devDependencies": {
     "chai": "^4.3.4",
