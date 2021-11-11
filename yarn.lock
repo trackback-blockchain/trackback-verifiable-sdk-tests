@@ -270,10 +270,10 @@
   resolved "https://registry.yarnpkg.com/@stablelib/wipe/-/wipe-1.0.1.tgz#d21401f1d59ade56a62e139462a97f104ed19a36"
   integrity sha512-WfqfX/eXGiAd3RJe4VU2snh/ZPwtSjLG4ynQ/vYzvghTh7dHFcI1wl+nrkWG6lGhukOxOsUHfv8dUXr58D0ayg==
 
-"@trackback/agent@0.0.1-alpha.23":
-  version "0.0.1-alpha.23"
-  resolved "https://registry.yarnpkg.com/@trackback/agent/-/agent-0.0.1-alpha.23.tgz#99fef1517d25ae927ec0be1eb1f13a2977086b81"
-  integrity sha512-FMxgeUDlpNCrDB2VUO/YgzH+QM4LfTybGyeQFpXbPRZ3iR0UDe2CM51ZF8fnVzA9vJBpL8Zz8m7weSoMcyOltA==
+"@trackback/agent@0.0.1-alpha.24":
+  version "0.0.1-alpha.24"
+  resolved "https://registry.yarnpkg.com/@trackback/agent/-/agent-0.0.1-alpha.24.tgz#8cfa1bfc5b951d48f2c6c5d82ba03fb7d442bcf5"
+  integrity sha512-t7GkmZGfyK/uTg9yjzqO1lSxgeAoY6/dObg9QU0SrHaAmNVz9HigFUgXQahMC8Q4xF/BMbhXNoORbR/RLlDXag==
   dependencies:
     "@polkadot/api" "^6.5.2"
     "@polkadot/keyring" "^7.6.1"
