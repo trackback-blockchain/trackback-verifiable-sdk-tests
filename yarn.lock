@@ -270,37 +270,37 @@
   resolved "https://registry.yarnpkg.com/@stablelib/wipe/-/wipe-1.0.1.tgz#d21401f1d59ade56a62e139462a97f104ed19a36"
   integrity sha512-WfqfX/eXGiAd3RJe4VU2snh/ZPwtSjLG4ynQ/vYzvghTh7dHFcI1wl+nrkWG6lGhukOxOsUHfv8dUXr58D0ayg==
 
-"@trackback/agent@0.0.1-alpha.24":
-  version "0.0.1-alpha.24"
-  resolved "https://registry.yarnpkg.com/@trackback/agent/-/agent-0.0.1-alpha.24.tgz#8cfa1bfc5b951d48f2c6c5d82ba03fb7d442bcf5"
-  integrity sha512-t7GkmZGfyK/uTg9yjzqO1lSxgeAoY6/dObg9QU0SrHaAmNVz9HigFUgXQahMC8Q4xF/BMbhXNoORbR/RLlDXag==
+"@trackback/agent@0.0.1-alpha.35":
+  version "0.0.1-alpha.35"
+  resolved "https://registry.yarnpkg.com/@trackback/agent/-/agent-0.0.1-alpha.35.tgz#4d4ec27041c44914dc4eb13211f19b9c90a69a87"
+  integrity sha512-Wpbh6nXjcDEWDaKv7f+rbrs/6yzIlIYTic8wFmzEsfQ/OFgsVTuSqAJOns8RwfnSrlddUxG3FHbdXd10NFCfwQ==
   dependencies:
     "@polkadot/api" "^6.5.2"
     "@polkadot/keyring" "^7.6.1"
     "@polkadot/types" "^6.5.2"
     "@polkadot/util-crypto" "^7.6.1"
-    "@trackback/key" "^0.0.1-alpha.5"
-    "@trackback/vc" "^0.0.1-alpha.6"
+    "@trackback/key" "^0.0.1-alpha.12"
+    "@trackback/vc" "^0.0.1-alpha.13"
     axios "^0.24.0"
     uuid "^8.3.2"
 
-"@trackback/key@0.0.1-alpha.5", "@trackback/key@^0.0.1-alpha.5":
-  version "0.0.1-alpha.5"
-  resolved "https://registry.yarnpkg.com/@trackback/key/-/key-0.0.1-alpha.5.tgz#92cf2b454cd28a44eb99bc91e4fb2564c5d207fa"
-  integrity sha512-CqSkp7sCtcT2GSrOQmZbtSMmwIvVL/4npvTqG9HTNqcpTygd/tLIizPJjX8tHHcJYWOvrM7MIW1DB248YoAKnQ==
+"@trackback/key@0.0.1-alpha.12", "@trackback/key@^0.0.1-alpha.12":
+  version "0.0.1-alpha.12"
+  resolved "https://registry.yarnpkg.com/@trackback/key/-/key-0.0.1-alpha.12.tgz#68ce0da4c265bb77526537e1aeba39af3592de80"
+  integrity sha512-FuiqoRZFtUZe94NwWtjlj01Xj8D43EnR4EITS0Wlj5WDAMTKdVgtYYlen1pxAJ9XDojOhdFY1iTzW7d+KK8rZg==
   dependencies:
     "@stablelib/ed25519" "^1.0.2"
     crypto "^1.0.1"
     jose "^3.19.0"
     ts-node "^10.2.1"
 
-"@trackback/vc@0.0.1-alpha.6", "@trackback/vc@^0.0.1-alpha.6":
-  version "0.0.1-alpha.6"
-  resolved "https://registry.yarnpkg.com/@trackback/vc/-/vc-0.0.1-alpha.6.tgz#762d2dbab0a23964d41394f9814416e580d64507"
-  integrity sha512-TP1rs1wgIJIfZh3l4zKCxg1HLWG88/GPhlnlnGmIKCgOj7yfgEFlq0tq0pJuNwWV2O/G+ELKhC5ogqKp+zDpuQ==
+"@trackback/vc@0.0.1-alpha.13", "@trackback/vc@^0.0.1-alpha.13":
+  version "0.0.1-alpha.13"
+  resolved "https://registry.yarnpkg.com/@trackback/vc/-/vc-0.0.1-alpha.13.tgz#8f26525d90c930c9b0e714de14cc8a04c5b42bed"
+  integrity sha512-BmZYn7HB13LRks0ZrjHeWm1dLI/l8z+Uux7HBTZIznEwP2e0Damtk9zBSbeAHBC62Wx8igaAuEToNJhUi1Z7dA==
   dependencies:
     "@stablelib/ed25519" "^1.0.2"
-    "@trackback/key" "^0.0.1-alpha.5"
+    "@trackback/key" "^0.0.1-alpha.12"
     jose "^3.17.0"
     moment "^2.29.1"
     uint8arrays "^3.0.0"
