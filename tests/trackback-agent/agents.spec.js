@@ -81,6 +81,7 @@ describe('TrackBack Agent SDK Tests', () => {
             credentialSubject: { name: "Test", surname: "Test Test" },
             issuer: issuer.id,
         };
+        console.log(credential)
         const jwt = await issuer.createVerifiableCredentials(credential);
 
         expect(typeof jwt).to.be.equal('string')
